@@ -1,5 +1,5 @@
-function V = range_filter(RGB)
-%RGB = imread(path);
+function V = range_filter(path)
+RGB = imread(path);
 r = RGB(:,:,1);
 g = RGB(:,:,2);
 b = RGB(:,:,3);

@@ -1,0 +1,25 @@
+files = dir('C:/Users/Jordan/Documents/This Semester/ECE 759/Project2/NoWaterTraining/*.jpg');
+path = 'C:/Users/Jordan/Documents/This Semester/ECE 759/Project2/NoWaterTraining/';
+i = 1;
+x = zeros(1,10);
+y = zeros(1,10);
+for file = files'
+    RGB = imread(strcat(path,file.name));
+    x(i) = mean2(RGB);
+    y(i) = std2(RGB);
+    i = i + 1;
+end
+
+files = dir('C:/Users/Jordan/Documents/This Semester/ECE 759/Project2/ImagesWithWaterTRAINING/*.jpg');
+path = 'C:/Users/Jordan/Documents/This Semester/ECE 759/Project2/NoWaterTraining/';
+i = 1;
+x = zeros(1,10);
+y = zeros(1,10);
+for file = files'
+    RGB = imread(strcat(path,file.name));
+    x(i) = mean2(RGB);
+    y(i) = std2(RGB);
+    i = i + 1;
+end
+
+plot(x,y,'r*')
